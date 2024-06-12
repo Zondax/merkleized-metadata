@@ -23,6 +23,7 @@
 extern crate alloc;
 
 use alloc::string::String;
+use codec::Encode;
 use extrinsic_decoder::{
 	decode_extrinsic_and_collect_type_ids, decode_extrinsic_parts_and_collect_type_ids,
 };
@@ -38,7 +39,7 @@ mod merkle_tree;
 pub mod types;
 
 /// Extra information that is required to generate the [`MetadataDigest`].
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Encode)]
 pub struct ExtraInfo {
 	/// The spec version of the runtime.
 	pub spec_version: u32,
