@@ -28,10 +28,14 @@ use extrinsic_decoder::{
 	decode_extrinsic_and_collect_type_ids, decode_extrinsic_parts_and_collect_type_ids,
 };
 use frame_metadata::RuntimeMetadata;
-use from_frame_metadata::FrameMetadataPrepared;
 use merkle_tree::MerkleTree;
-pub use merkle_tree::Proof;
 use types::MetadataDigest;
+
+pub use from_frame_metadata::{FrameMetadataPrepared};
+pub use merkle_tree::Proof;
+pub use types::ExtrinsicMetadata;
+pub use extrinsic_decoder::TypeResolver;
+pub use extrinsic_decoder::CollectAccessedTypes;
 
 mod extrinsic_decoder;
 mod from_frame_metadata;
